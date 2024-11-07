@@ -30,6 +30,7 @@ export default function Home() {
           <div
             key={game.id}
             className="group relative rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105"
+            style={{ opacity: 1 }}
           >
             {game.background_image && (
               <Image
@@ -37,10 +38,10 @@ export default function Home() {
                 alt={game.name}
                 width={300}
                 height={200}
-                className="w-full h-48 object-cover group-hover:opacity-75"
+                className="w-full h-48 object-cover"
               />
             )}
-            <div className="p-4 bg-gray-900 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div className="p-4 bg-gray-900 transition duration-300">
               <h2 className="text-xl font-bold text-white mb-2">{game.name}</h2>
               <p className="text-gray-400 text-sm">
                 {game.released && new Date(game.released).getFullYear()}
