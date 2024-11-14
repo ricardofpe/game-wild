@@ -18,6 +18,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  color: #0a0a0a;
 }
 
 @layer utilities {
@@ -27,7 +28,7 @@ body {
 }
 
 @layer components {
-  .container{
-    @apply max-w-7xl mx-auto px-10
+  .container {
+    @apply max-w-7xl mx-auto px-10;
   }
 }
