@@ -144,7 +144,9 @@ export default function Home() {
                   <button
                     key={genre.id}
                     className={`px-3 py-2 rounded-full bg-blue-950 text-white hover:border-blue-500 ${
-                      selectedGenres.includes(genre.id) ? "border-white" : ""
+                      selectedGenres.includes(genre.id)
+                        ? "border-2 border-white"
+                        : ""
                     }`}
                     onClick={() => handleGenreSelection(genre.id)}
                   >
@@ -168,7 +170,7 @@ export default function Home() {
                     key={platform.id}
                     className={`px-3 py-2 rounded-full bg-blue-950 text-white hover:border-blue-500 ${
                       selectedPlatforms.includes(platform.id)
-                        ? "border-white"
+                        ? "border-2 border-white"
                         : ""
                     }`}
                     onClick={() => handlePlatformSelection(platform.id)}

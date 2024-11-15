@@ -1,11 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['media.rawg.io'], 
+  images: {
+    domains: ['media.rawg.io'], 
+  },
+  env: {
+      API_KEY_RAWG: process.env.API_KEY_RAWG,
     },
-    env: {
-        API_KEY_RAWG: process.env.API_KEY_RAWG,
-      },
-  };
-  
-  export default nextConfig;
+  exportPathMap: async function() {
+      return {
+        '/': { page: '/home' } 
+      }
+    },
+};
+
+export default nextConfig;
